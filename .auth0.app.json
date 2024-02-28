@@ -1,0 +1,47 @@
+{
+    "name": "BookItQuick.com",
+    "description": "",
+    "client_id": "smADmuCXHm042BNSzXhAvXqNKMIeYkLR",
+    "client_secret": "85JIaDbzfrX1wJ-gfRrFJEEf9r92XfVBpnP9gJBlBJ0q-jCK7ORtiOuO4cCA7ba6",
+    "app_type": "regular_web",
+    "is_first_party": true,
+    "is_token_endpoint_ip_header_trusted": false,
+    "oidc_conformant": true,
+    "callbacks": [
+        "http://localhost:8000/callback"
+    ],
+    "allowed_logout_urls": [
+        "http://localhost:8000"
+    ],
+    "jwt_configuration": {
+        "secret_encoded": false,
+        "alg": "RS256"
+    },
+    "signing_keys": [
+        {
+            "cert": "-----BEGIN CERTIFICATE-----\r\nMIIDHTCCAgWgAwIBAgIJD8IJpHG7ArJ0MA0GCSqGSIb3DQEBCwUAMCwxKjAoBgNV\r\nBAMTIWRldi1uNmF5b2V5b2NuZ3diYW0xLnVzLmF1dGgwLmNvbTAeFw0yMzA3MTIw\r\nOTEwNDhaFw0zNzAzMjAwOTEwNDhaMCwxKjAoBgNVBAMTIWRldi1uNmF5b2V5b2Nu\r\nZ3diYW0xLnVzLmF1dGgwLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC\r\nggEBALpPZSTFyMTO2bpM1HHzhT/Mq2wZ3MBslLazcbmGpMGIpTInxzDqfnIkShMf\r\nOooxCfbS66jiYbsRm7B+kGLS5gpmkCU2Xku01+1+OlvrVcabK8Z2HMrAinU8Bc2e\r\nE7jjFCOiVSIx36SatVGgt0fHnGGTY8LL6sPQlOmdzCXpz++Z/r/ThF6KdOw2CJd8\r\nVPCuI0lExg2KHLY5aeX5GsxADsuSskSb2JgqYo/N5O8f4d5oE8TP9gStj3GNltF9\r\nGecvOnjlR9wbri+pFuhlOFRqEpnRSv2PuIYkDIQ2hhiwW0xRx5xkzaxxpiuTH4PL\r\nzX3AAtvW9qA/bHXVKoy+kHwq+ZkCAwEAAaNCMEAwDwYDVR0TAQH/BAUwAwEB/zAd\r\nBgNVHQ4EFgQUZpcYkoAPi/LFnYZFcPDbNLAjQN0wDgYDVR0PAQH/BAQDAgKEMA0G\r\nCSqGSIb3DQEBCwUAA4IBAQAbhYmYdhIw8tm+kxGAfOcFXRf4869aaLHuxKpeTWce\r\nvmD1Iu7j4ley1uiRO4igqYCL/0euD6OHTsyFJZLoIohNMqZnxK5haykcaTQ9cz7e\r\n7SsnqTWyO17U0aXA5VJwjeasAH4yD2UFcPhBmiu0ofg6e14Zsis18FpLd7upDdNo\r\n6qAEbO6IUX7lRFF9B0Hyc10WfbkzCWgJ7WLLpM55A5r5HRXTIzBq+S0S6YzCyBW2\r\nkKTy1DoZ8kDTYz0kgHc/Cq5SwfZ1p5C/RZ2DDSFcC21x97j0gu7CpvI6UHOJujPa\r\nUY3c/yJ6ootCojfctTzTGjaXsKUWRZzH0pBQce+U9fwM\r\n-----END CERTIFICATE-----\r\n",
+            "key": "-----BEGIN RSA PRIVATE KEY-----\r\nMIIEowIBAAKCAQEAv87tPlo8oY3z4wzSIkTjO4LQp8ZxKXiLLwwA6Jm5EsC6j+iw\r\n5b+B5KWqoubyQU34UpaBMkyZyReEQHG1fqxiWr4+FoCMdDWhCDCN0ngyqin2Gk1x\r\nXohNgn+V87cZqhtbatpxEjCY9W4coRXs1YlMpJjs0CSXAvHigjPMOp5O6q7fxhA6\r\n7MzircxxyjLYwQBRDrB58S2Qf2Ctu4gosimZblz/+iyvP1lO35OidUwdpMDy4i0c\r\nUM+u2U8t6URjs6In0wWk8D8bnZMBzgl27BVFUdAypKVJOlyP4R8h89uFRFQhwf00\r\nZxjVPE7WMVxuE8ROd4udd3wJIGjTyDBEJdOKvwIDAQABAoIBAACloaK7bYriq1sG\r\nPQwC8P38aK5jc7AuEY0y7rGtJ42IFJyKJJtcsMrOjfeIZc91VHRIOe0ewDbiU4tW\r\n9oAxiPPhpjl7g7554dALHddDsu09IyZ4ScomI7UlFOumQFgIJLaGOrOymV34X6HS\r\nSOcqLNwyHHnyS83dzgV/W7zFQWhG2WRFTNi2VGdjiZqXVBf+yeRYNBZi6may+bWL\r\nTHvU5Vy9irGWibZp+3Sy7TDWaTNfp+MTKU2kap2P1FJLQzvGZRjasspzmaKh5okd\r\nIqvr7/iYfqalgggkom3kd7U/lS11eQRHxTp5vOuTg9kecMEksiIauHz8AQc8qUc/\r\n3aU6uIkCgYEA5guwfvejDZc50WotTg7TArl/ujZxRNKO9V3bRFE1ThO6V0bmRFPa\r\n3ze5oCQxbd/qZDaEOlGAGxiSgSSr9dh+6I7zTDr0suLdDCK/aTS0P/2adY2sII/i\r\n0BX6/HNx2KmAXlSFozUA1b/eFFBb+CG76OrpTRXhjlSRLvA9L3VI+NsCgYEA1XLY\r\nGMN0+DfxhESgILLvzoQJhlqg6hijsJzMM/DMBcJYYuCnRHFM2vuwrUpmpu6q80xK\r\nDzjpwRS7dguQXHErbNPXDJagoD+1aKP/KF+4Vy+bNOCUEgyrruUEY1iJrpr9ia9d\r\nXIhPZGRoKOVwkRml0oiHCAWP5x358NEThoLj+O0CgYA95fNNlpBW/dPe1zTtheud\r\nFhCaKD/+BrHUr7ZqAXfYVFKVXUxkIjQIT9QwlMyABfnpkQmvL3LK16fD+/wRIHm1\r\nVZF9d3eUEprrwwXB5x6BAVnoO4CPGmgrGV75Qo7lf2Y8+30h1wcsfH3i9WRptZn8\r\nKAkyZqrUQ0j1Wkr8VBCYdQKBgF2Ku/t2RR+23Kg7rvVFleSqZsYzl4ugCrSOsssc\r\nfz0S48tJauSKxsS9Qrte/MexlseTKm2rYn3UiSb9gGGS0xYZbIg+xtwTr3vRSzQ1\r\nZsMGwP0WYq3aUa8O/LJRDd2wXOZnLQItVqXHfwJVMtTUKaCvZoX0chE2SN/psKXl\r\nXOUtAoGBAJ2I7mrYsY4nzqPE4Ug2rUliq05mDusS2zqLnXwNr2zACDl5bmvZyW3a\r\np/2GgWagxU2GE5KZ1MnFl8yXNXT7CLLY8iLMeiJapp30pdAnyaN/d7iquG55G3p5\r\n5m40tFtXnQ6CNzjMkRyyzQE8CR52tgtqtINHSjX3XW1Y0XP+ubai\r\n-----END RSA PRIVATE KEY-----\r\n",
+            "pkcs7": "-----BEGIN PKCS7-----\r\nMIIDTAYJKoZIhvcNAQcCoIIDPTCCAzkCAQExADALBgkqhkiG9w0BBwGgggMhMIID\r\nHTCCAgWgAwIBAgIJD8IJpHG7ArJ0MA0GCSqGSIb3DQEBCwUAMCwxKjAoBgNVBAMT\r\nIWRldi1uNmF5b2V5b2NuZ3diYW0xLnVzLmF1dGgwLmNvbTAeFw0yMzA3MTIwOTEw\r\nNDhaFw0zNzAzMjAwOTEwNDhaMCwxKjAoBgNVBAMTIWRldi1uNmF5b2V5b2NuZ3di\r\nYW0xLnVzLmF1dGgwLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEB\r\nALpPZSTFyMTO2bpM1HHzhT/Mq2wZ3MBslLazcbmGpMGIpTInxzDqfnIkShMfOoox\r\nCfbS66jiYbsRm7B+kGLS5gpmkCU2Xku01+1+OlvrVcabK8Z2HMrAinU8Bc2eE7jj\r\nFCOiVSIx36SatVGgt0fHnGGTY8LL6sPQlOmdzCXpz++Z/r/ThF6KdOw2CJd8VPCu\r\nI0lExg2KHLY5aeX5GsxADsuSskSb2JgqYo/N5O8f4d5oE8TP9gStj3GNltF9Gecv\r\nOnjlR9wbri+pFuhlOFRqEpnRSv2PuIYkDIQ2hhiwW0xRx5xkzaxxpiuTH4PLzX3A\r\nAtvW9qA/bHXVKoy+kHwq+ZkCAwEAAaNCMEAwDwYDVR0TAQH/BAUwAwEB/zAdBgNV\r\nHQ4EFgQUZpcYkoAPi/LFnYZFcPDbNLAjQN0wDgYDVR0PAQH/BAQDAgKEMA0GCSqG\r\nSIb3DQEBCwUAA4IBAQAbhYmYdhIw8tm+kxGAfOcFXRf4869aaLHuxKpeTWcevmD1\r\nIu7j4ley1uiRO4igqYCL/0euD6OHTsyFJZLoIohNMqZnxK5haykcaTQ9cz7e7Ssn\r\nqTWyO17U0aXA5VJwjeasAH4yD2UFcPhBmiu0ofg6e14Zsis18FpLd7upDdNo6qAE\r\nbO6IUX7lRFF9B0Hyc10WfbkzCWgJ7WLLpM55A5r5HRXTIzBq+S0S6YzCyBW2kKTy\r\n1DoZ8kDTYz0kgHc/Cq5SwfZ1p5C/RZ2DDSFcC21x97j0gu7CpvI6UHOJujPaUY3c\r\n/yJ6ootCojfctTzTGjaXsKUWRZzH0pBQce+U9fwMMQA=\r\n-----END PKCS7-----\r\n",
+            "subject": "/CN=dev-n6ayoeyocngwbam1.us.auth0.com"
+        }
+    ],
+    "sso_disabled": false,
+    "grant_types": [
+        "implicit",
+        "authorization_code",
+        "refresh_token",
+        "client_credentials"
+    ],
+    "custom_login_page_on": true,
+    "token_endpoint_auth_method": "client_secret_post",
+    "client_metadata": {},
+    "refresh_token": {
+        "rotation_type": "non-rotating",
+        "expiration_type": "non-expiring",
+        "leeway": 0,
+        "token_lifetime": 31557600,
+        "infinite_token_lifetime": true,
+        "infinite_idle_token_lifetime": true,
+        "idle_token_lifetime": 2592000
+    }
+}

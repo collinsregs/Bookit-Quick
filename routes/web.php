@@ -1,18 +1,41 @@
 <?php
 
+use App\Http\Controllers\EventController;
+use App\Http\Controllers\TicketController;
+use Auth0\Laravel\Facade\Auth0;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+// events routes
+Route::get('/events', [EventController::class, 'show'])->name('events');
+Route::get('/event/new', function() { return view('newEvent'); })->name('newEvent');
+Route::get('/event/{event_Id}', [EventController::class, 'index'])->name('event');
+Route::post('/createEvent', [EventController::class, 'create'])->name('createEvent');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+//  ticket routes
+Route::get('/tickets',[TicketController::class, 'show']);
+// Route::get('/ticket/new/{event}', function($event) {return view('newTicket', ['event_Id' => $event]);});
+Route::get('/ticket/new/{event}',[TicketController::class, 'ticketDetails']);
+Route::get('/ticket',[TicketController::class, 'index']);
+Route::post('/createTicket/{event_Id}',[TicketController::class, 'create']);
+
+
+
+Route::get('/',function() { return view('home');});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
