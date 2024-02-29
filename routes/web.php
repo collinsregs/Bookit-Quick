@@ -22,7 +22,10 @@ Route::post('/createTicket/{event_Id}',[TicketController::class, 'create']);
 
 
 
-Route::get('/',function() { return view('home');});
+Route::get('/',function() {
+    // $user= auth()->user();
+    // dump($user);
+    return view('home_event');});
 
 
 
@@ -39,3 +42,7 @@ Route::get('/',function() { return view('home');});
 
 
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

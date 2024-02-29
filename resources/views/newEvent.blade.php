@@ -5,6 +5,11 @@
     <form action="/createEvent" method="post" enctype="multipart/form-data">
         @csrf
         <div class="form">
+            <div class="form_card">
+                <div class="form_card_title">
+                    Tell us about your event:
+                </div>
+
             <div class="nice-form-group">
                 <label for="event_Name">Enter the Name of the Event</label>
                 <input type="text" id="event_Name" name="event_Name" placeholder="Event name" required>
@@ -39,9 +44,14 @@
                     <option value="Charity & Causes">Charity & Causes</option>
                 </select>
             </div>
-
+        </div>
 
             <hr class="divider">
+            <div class="form_card">
+                <div class="form_card_title">
+                    Who do you want there:
+                </div>
+
             <div class="nice-form-group">
                 <label for="max_Attendees">Enter the Maximum Number of Attendees</label>
                 <br>
@@ -62,15 +72,21 @@
                 <br>
                 <input type="number" id="VIP_ticket_price" name="VIP_ticket_price" min="0" >
             </div>
+        </div>
 
             <hr class="divider">
+            <div class="form_card">
+                <div class="form_card_title">
+                    How does the poster look:
+                </div>
             <div class="nice-form-group">
                 <label for="image">Upload an Image to Represent the Event</label>
 
                 <input type="file" id="image" name="image">
             </div>
+        </div>
             <div class="nice-form-group">
-                <input type="submit" value="Submit">
+                <input type="submit" value="Register Event" class="hero-button">
             </div>
         </div>
     </form>

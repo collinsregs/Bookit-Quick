@@ -34,7 +34,7 @@
         {{-- this should hold a call to action saying the number of tiskets available and the book tickets button --}}
 @if (true)
 <div>Only <span>{{$event->VIP_ticket_price}}</span> tickets remaining. Get yours now</div>
-<div> <a href="/ticket/new/{{$event->event_Id}}"> get tickets now</a></div>
+<div > <a class="hero-button" href="/ticket/new/{{$event->event_Id}}"> get tickets now</a></div>
 @else
     <div>Sorry all sold out</div>
 @endif

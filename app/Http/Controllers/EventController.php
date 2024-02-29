@@ -71,6 +71,7 @@ class EventController extends Controller
     }
 
     public function show(){
-        return view('viewAllEvents');
-    }
-}
+        $events = Event::paginate(10); // Display 10 items per page
+        return view('viewAllEvents', ['events' => $events]);
+
+    }}
