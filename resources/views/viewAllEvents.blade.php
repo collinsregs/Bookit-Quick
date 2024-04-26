@@ -6,18 +6,24 @@
 
 <div class="list_wrap">
 
-    <div>
-        <form onsubmit="event.preventDefault();" role="search" class="form_search">
-            <label class="label_search"for="search">Search for stuff</label>
-            <input id="search" type="search" placeholder="Search for events..." autofocus required class="input_search"/>
-            <button class="button_search" type="submit">Search</button>
-          </form>
-    </div>
+
+
 <div class="event_wrapper">
+    @if ( $message!=null)
+    <h2 class="event-h2">{{$message}}</h2>
+    @else
+    <h2 class="event-h2">View all events</h2>
+    @endif
+
+    @if ($events->count() == 0)
+<h2 class="event-h2">
+    No items matching your search
+</h2>
+    @endif
 
     @foreach ($events as $item)
-    <a href="/event/{{$item['event_Id']}}">
-    <div class="event_listing">
+    <a class="card-link" href="/event/{{$item['event_Id']}}">
+    <div class="event_listing" style="    background-image: url('{{$item['image']}}');">
         <div class='event_content'><div>
             <span class="event_text">{{$item['event_Name']}}</span>
             <br>

@@ -14,22 +14,37 @@
     <title>BookItQuick</title>
 </head>
 <body>
+    {{-- @dump(auth()->user()) --}}
     <nav id="navbar" class="nav-div-wrapper">
 
         <div class="nav-div">
             <div class="search">
-                <input type="search" autocomplete="off" required/>
-                <svg xmlns="http://www.w3.org/2000/svg"
+                <form class="search-form" action="/search" method="GET" class="search"onsubmit="console.log('Form submitted')">
+                <input type="search"name="search"  autocomplete="off" required/>
+
+                <svg class="search-svg"xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 -20 1000 150
                 ">
-                  <path class="path" fill="none" d="M924.4 85.2c-19.5 19.5-50.8 19.7-70.3 0-19.3-19.4-19.3-51 .3-70.6 19.5-19.5 51-19.4 70.6 0 19.3 19.7 19.3 50.8-.5 70.6l35.4 35.3H0"/>
+                  <path class="path" fill="none" d="m 75.6 85.2 c 19.5 19.5 50.8 19.7 70.3 0 c 19.3 -19.4 19.3 -51 -0.3 -70.6 c -19.5 -19.5 -51 -19.4 -70.6 0 c -19.3 19.7 -19.3 50.8 0.5 70.6 l -35.4 35.3 h 959.9"
+
+                  />
                 </svg>
+            </form>
+            <script>
+                // Use JavaScript to submit the form when the enter key is pressed
+                document.getElementById('search-input').addEventListener('keydown', function(event) {
+                    if (event.key === 'Enter') {
+                        event.preventDefault();  // Prevent the default form submission which refreshes the page
+                        document.getElementById('search-form').submit();  // Submit the form manually
+                    }
+                });
+            </script>
               </div>
 
         </div>
         <div class="nav-div">
 
-            <a href="#">Events</a>
+            <a href="/events">Events</a>
             <a class=" nav_heading" href="\">BookItQuick</a>
             <a href="#">Support</a>
         </div>
@@ -50,24 +65,28 @@
 
 
         @else
-            <li class="nav-item ">
+        <li class="nav-item">
+            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                {{ Auth::user()->name }}
+            </a>
 
-                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                    {{ Auth::user()->name }}
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/tickets">
+                    Tickets
                 </a>
 
-                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{{ route('logout') }}"
-                       onclick="event.preventDefault();
-                                     document.getElementById('logout-form').submit();">
-                        {{ __('Logout') }}
-                    </a>
+                <a class="dropdown-item" href="{{ route('logout') }}"
+                   onclick="event.preventDefault();
+                             document.getElementById('logout-form').submit();">
+                    {{ __('Logout') }}
+                </a>
 
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                        @csrf
-                    </form>
-                </div>
-            </li>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                </form>
+            </div>
+        </li>
+
         @endguest
         </div>
 

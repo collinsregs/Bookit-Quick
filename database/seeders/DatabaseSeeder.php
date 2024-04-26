@@ -18,7 +18,9 @@ class DatabaseSeeder extends Seeder
 
         \App\Models\User::factory()->create([
             'name' => 'Test User',
-            'email' => 'test@example.com',
+            'email' => 'cit2230412020@mmu.ac.ke',
+            'password' => bcrypt('testuserpassword'),
+            'isAdmin' => true,
         ]);
         $this->call(EventSeeder::class);
         $this->call(TicketSeeder::class);

@@ -10,22 +10,27 @@ Route::get('/events', [EventController::class, 'show'])->name('events');
 Route::get('/event/new', function() { return view('newEvent'); })->name('newEvent');
 Route::get('/event/{event_Id}', [EventController::class, 'index'])->name('event');
 Route::post('/createEvent', [EventController::class, 'create'])->name('createEvent');
+Route::get('/event/update/{event_Id}',[EventController::class, 'updateView']);
+Route::put('/updateEvent/{event_Id}', [EventController::class, 'update'])->name('updateEvent');
+Route::get('/search', [EventController::class, 'search']);
+
 
 
 
 //  ticket routes
-Route::get('/tickets',[TicketController::class, 'show']);
-// Route::get('/ticket/new/{event}', function($event) {return view('newTicket', ['event_Id' => $event]);});
-Route::get('/ticket/new/{event}',[TicketController::class, 'ticketDetails']);
-Route::get('/ticket',[TicketController::class, 'index']);
+Route::get('/tickets',[TicketController::class, 'show'])->name('viewAllTickets');
+Route::get('/ticket/new/{event}',[TicketController::class, 'ticketDetails'])->middleware('auth');
+Route::get('/ticket/{event_Id}',[TicketController::class, 'index']);
 Route::post('/createTicket/{event_Id}',[TicketController::class, 'create']);
 
 
+Route::get('/',[EventController::class, 'popularEvents']);
+// Route::get('/',function() {
+//     // $user= auth()->user();
+//     // dump($user);
+//     return view('home_event');});
 
-Route::get('/',function() {
-    // $user= auth()->user();
-    // dump($user);
-    return view('home_event');});
+
 
 
 
