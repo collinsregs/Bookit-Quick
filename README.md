@@ -1,4 +1,4 @@
-[# BookItQuick.com
+# BookItQuick.com
 
 ## Database Setup
 
@@ -13,15 +13,17 @@ To set up the database, you will need to run the migrations and seed the databas
 
 ```bash
 php artisan migrate --seed
+```
 
 
 ## Administrator Login
 
-After migrating and seeding the database, you can login as an administrator using the following credentials:
-
+After migrating and seeding the database, you can log in as an administrator using the following credentials:
+```
 - Name: Test User
 - Email: cit2230412020@mmu.ac.ke
 - Password: testuserpassword
+```
 
 ## Email Services
 
@@ -30,4 +32,4 @@ Email services are set up with Postmark. However, due to the account awaiting ap
 ## Thank You
 
 Finally, thank you for the opportunity to present this project. If you have any questions or need further information, please feel free to reach out.
-](../README.md)
+]
